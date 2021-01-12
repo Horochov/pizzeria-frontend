@@ -56,7 +56,7 @@ function Menu() {
     const [orderValue, setOrderValue] = useState()
     const [orderNotes, setOrderNotes] = useState([])
     const [billId, setBillId] = useState("999")
-    const { user, setUser } = useContext(Context)
+    const { user, password } = useContext(Context)
     const {logged, setLogged} = useContext(Context)
     const [popupNoResp, setPopupNoResp] = useState(false)
     const [popupNotLogged, setPopupNotLogged] = useState(false) 
@@ -104,6 +104,7 @@ function Menu() {
             body: JSON.stringify({
                 order: jsonArr,
                 waiter: user,
+                waiterPassword: password,
                 table: tableNumer,
                 clientName: name
             })
