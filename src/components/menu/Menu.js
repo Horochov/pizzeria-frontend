@@ -124,12 +124,11 @@ function Menu() {
         data.map(item => {
             menu.push({
                 productName: item[1],
-                ingredients: item[7],
-                size: item[5] + " " + item[6],
-                price: item[3] + " zł",
+                ingredients: item[4],
+                size: item[3],
+                price: item[5] + " zł",
                 productId: item[0],
-                quantity: item[2],
-                type: item[4]
+                type: item[2]
             })
         })
         setMenuItems(menu)
