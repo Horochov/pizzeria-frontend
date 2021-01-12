@@ -81,7 +81,8 @@ function Menu() {
         console.log(tableNumer)
         sendOrder()
         setPopupOpen(false)
-        getMenu()
+        setShoppingCart([])
+        setName('')
     }
 
     const sendOrder = async () => {

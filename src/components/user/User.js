@@ -9,18 +9,19 @@ import { useHistory } from 'react-router-dom'
 
 function User() {
 
-    const { user, setUser, setLogged } = useContext(Context)
+    const { user, setUser, setPassword, setLogged } = useContext(Context)
     const history = useHistory()
 
     const logout =  () => {
-        setUser("JS")
+        setUser("")
+        setPassword("")
         setLogged(false)
         history.push("/login");
     }
     
     return (
         <div className="useroptions">
-            <h1>Opcje użytkownika</h1>
+            <h1>Opcje użytkownika {user}</h1>
             <br />
             <Button onClick={logout} variant="primary">
                 Wyloguj

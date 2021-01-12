@@ -11,7 +11,7 @@ function Login() {
     const [typedPassword, setTypedPassword] = useState()
     const [failedLogin, setFailedLogin] = useState(false)
     const history = useHistory()
-    const { user, setUser, setLogged } = useContext(Context)
+    const { user, setUser, password, setPassword, setLogged } = useContext(Context)
 
     const checkLogin = async () => {
         console.log("check login")
@@ -45,6 +45,7 @@ function Login() {
             if (isCorrect === true) {
                 setLogged(true)
                 setUser(typedNickname)
+                setPassword(typedPassword)
                 history.push("/home");
             }
             else
